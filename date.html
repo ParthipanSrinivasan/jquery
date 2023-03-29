@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date formate</title>
+    <script src="jquerymin/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <div style="margin: 200px;">
+        <form onclick="myfuncation(event)">
+            <label for="">Birthday date :</label>
+            <input type="date" id="dat" name="birthday" required><br>
+            <input type="submit" value="Submit">
+        </form>
+        <h1 id=container></h1>
+        <h3 id="cont"></h3>
+        <h3 id="ele"></h3>
+    </div>
+    <script>
+        function myfuncation(event){
+            event.preventDefault()
+            event.stopPropagation()
+            var le= document.getElementById("dat").value;  
+            var startDay = new Date(le); 
+            var endDay = new Date();
+            var diffyear = (startDay.getTime() - endDay.getTime())/1000;  
+            var year = diffyear / (60 * 60 * 24);
+            var diffMonth =(startDay.getTime() - endDay.getTime())/1000;
+            var lam=diffMonth / (60 * 60 * 24 * 7 * 4);
+            var lan= Math.abs(Math.round(lam))%12;
+            var strin=Math.abs(Math.round(year/365.25))+" : years "+ lan +" : Month age differnt calculater....!"
+            document.getElementById("container").innerHTML=strin;
+            var ag=endDay.getMonth()+1;
+            if(1==ag){
+                var m=endDay.getDate()+"/"+"JAN"+"/"+endDay.getFullYear();
+                document.getElementById("ele").innerHTML=m;
+            }
+            else if(2==ag){
+                var m=endDay.getDate()+"/"+"FEB"+"/"+endDay.getFullYear();
+                document.getElementById("ele").innerHTML=m;
+            }
+            else if(3==ag){
+                var m=endDay.getDate()+"/"+"MAR"+"/"+endDay.getFullYear();
+                document.getElementById("ele").innerHTML=m;
+            }
+            else if(4==ag){
+                var m=endDay.getDate()+"/"+"APR"+"/"+endDay.getFullYear();
+                document.getElementById("ele").innerHTML=m;
+            }
+            else if(5==ag){
+                var m=endDay.getDate()+"/"+"MAY"+"/"+endDay.getFullYear();
+                document.getElementById("ele").innerHTML=m;
+            }
+            else if(6==ag){
+                var m=endDay.getDate()+"/"+"JUN"+"/"+endDay.getFullYear();
+                document.getElementById("ele").innerHTML=m;
+            }
+            else if(7==ag){
+                var m=endDay.getDate()+"/"+"JUL"+"/"+endDay.getFullYear();
+                document.getElementById("ele").innerHTML=m;
+            }
+            else if(8==ag){
+                var m=endDay.getDate()+"/"+"AUG"+"/"+endDay.getFullYear();
+                document.getElementById("ele").innerHTML=m;
+            }
+            else if(9==ag){
+                var m=endDay.getDate()+"/"+"SEP"+"/"+endDay.getFullYear();
+                document.getElementById("ele").innerHTML=m;
+            }
+            else if(10==ag){
+                var m=endDay.getDate()+"/"+"OCT"+"/"+endDay.getFullYear();
+                document.getElementById("ele").innerHTML=m;
+            }
+            else if(11==ag){
+                var m=endDay.getDate()+"/"+"NOV"+"/"+endDay.getFullYear();
+                document.getElementById("ele").innerHTML=m;
+            }
+            else if(12==ag){
+                var m=endDay.getDate()+"/"+"DEC"+"/"+endDay.getFullYear();
+                document.getElementById("ele").innerHTML=m;
+            }
+        }
+    </script>
+</body>
+</html>

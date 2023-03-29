@@ -32,55 +32,9 @@
             var lan= Math.abs(Math.round(lam))%12;
             var strin=Math.abs(Math.round(year/365.25))+" : years "+ lan +" : Month age differnt calculater....!"
             document.getElementById("container").innerHTML=strin;
-            var ag=endDay.getMonth()+1;
-            if(1==ag){
-                var m=endDay.getDate()+"/"+"JAN"+"/"+endDay.getFullYear();
-                document.getElementById("ele").innerHTML=m;
-            }
-            else if(2==ag){
-                var m=endDay.getDate()+"/"+"FEB"+"/"+endDay.getFullYear();
-                document.getElementById("ele").innerHTML=m;
-            }
-            else if(3==ag){
-                var m=endDay.getDate()+"/"+"MAR"+"/"+endDay.getFullYear();
-                document.getElementById("ele").innerHTML=m;
-            }
-            else if(4==ag){
-                var m=endDay.getDate()+"/"+"APR"+"/"+endDay.getFullYear();
-                document.getElementById("ele").innerHTML=m;
-            }
-            else if(5==ag){
-                var m=endDay.getDate()+"/"+"MAY"+"/"+endDay.getFullYear();
-                document.getElementById("ele").innerHTML=m;
-            }
-            else if(6==ag){
-                var m=endDay.getDate()+"/"+"JUN"+"/"+endDay.getFullYear();
-                document.getElementById("ele").innerHTML=m;
-            }
-            else if(7==ag){
-                var m=endDay.getDate()+"/"+"JUL"+"/"+endDay.getFullYear();
-                document.getElementById("ele").innerHTML=m;
-            }
-            else if(8==ag){
-                var m=endDay.getDate()+"/"+"AUG"+"/"+endDay.getFullYear();
-                document.getElementById("ele").innerHTML=m;
-            }
-            else if(9==ag){
-                var m=endDay.getDate()+"/"+"SEP"+"/"+endDay.getFullYear();
-                document.getElementById("ele").innerHTML=m;
-            }
-            else if(10==ag){
-                var m=endDay.getDate()+"/"+"OCT"+"/"+endDay.getFullYear();
-                document.getElementById("ele").innerHTML=m;
-            }
-            else if(11==ag){
-                var m=endDay.getDate()+"/"+"NOV"+"/"+endDay.getFullYear();
-                document.getElementById("ele").innerHTML=m;
-            }
-            else if(12==ag){
-                var m=endDay.getDate()+"/"+"DEC"+"/"+endDay.getFullYear();
-                document.getElementById("ele").innerHTML=m;
-            }
+            var arr=["JAN","FEB","MAR","APR","MAY","JUN","JULY","AUG","SEP","AUG","NOV","DEC"];
+            var as=endDay.getDate()+"/"+arr[endDay.getMonth()]+"/"+endDay.getFullYear();
+            document.getElementById("ele").innerHTML=as;
         }
     </script>
 </body>

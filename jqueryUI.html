@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jqueryUI</title>
+    <script src="jquerymin/jquery-ui.min.js"></script>
+    <script src="jquerymin/jquery-3.6.4.min.js"></script>
+    <script src="jquerymin/jquery-ui.js"></script>
+</head>
+<body>
+    <div class="accordion">
+        <h3>Selection 1</h3>
+        <div >
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eos quibusdam ducimus blanditiis saepe quisquam aperiam mollitia quo hic quae nisi dolores. Aut ducimus nihil aliquam commodi cupiditate repellendus ab.</p>
+        </div>
+        <h3>Selection 1</h3>
+        <div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sit cupiditate dolor ducimus obcaecati ipsum rerum animi quia voluptates error quaerat enim natus eveniet quod, laborum dolores blanditiis itaque? Ipsa.</p>
+        </div>
+        <h3>Selection 1</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias molestiae labore commodi similique quasi. Esse voluptatum officiis veniam voluptates, eius aperiam impedit. Cumque deserunt perferendis esse quia architecto eligendi adipisci?</p>
+        </div>
+        <h3>Selection 1</h3>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident praesentium, quae ipsum, accusamus architecto omnis enim nihil impedit, deserunt esse harum. Cum a similique quasi ut, amet rem minima culpa.</p>
+        </div>
+        <h3>Selection 1</h3>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A facilis in quae sint excepturi possimus ea eaque recusandae obcaecati repudiandae natus facere adipisci, quaerat laudantium laborum perspiciatis dolorum quas quia.</p>
+        </div>
+    </div>
+    <div>
+        <label for="">TagsName</label>
+        <input type="text" id="select">
+    </div>
+    <div class="slider"> <p></p></div>
+    <script>
+       $(document).ready(function(){
+        alert("jquery UI call back....")
+        $(".slider").slider();
+        $( function() {
+        var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+      "Scheme"
+        ];
+    $( "#select" ).autocomplete({
+      source: availableTags
+    });
+  } );
+
+       });
+    </script>
+</body>
+</html>

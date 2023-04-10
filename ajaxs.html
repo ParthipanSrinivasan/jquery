@@ -17,8 +17,9 @@
            $( ".trigger" ).click(function(){
                 $.ajax({url:'https://jsonplaceholder.typicode.com/users',method:'get',success:function(data){
                     alert("json selector");
+                    let val=""+data;
                     console.log(data);
-                    $('p').text(data);
+                    $('p').text(val);
                     console.log(data.length);
                     }
                  });

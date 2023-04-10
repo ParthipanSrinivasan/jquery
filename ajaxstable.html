@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajaxjquery</title>
+    <script src="jquerymin/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+        <div class="trigger">Trigger</div>
+<div class="result">
+    <table border="1">
+        <thead>
+            <tr>
+                <td>USER_ID</td>
+                <td>_NAME</td>
+                <td>USER_NAME</td>
+                <td>EMAIL_ID</td>
+            </tr>
+        </thead>
+        <tbody class="container">
+
+        </tbody>
+    </table>
+</div>
+<div class="log"></div>
+        <script>
+            var val='';
+           $( ".trigger" ).click(function(){
+                $.ajax({url:'https://jsonplaceholder.typicode.com/users',method:'get',success:function(data){
+                    alert("json selector");
+                    //val = JSON.stringify(data);
+                   // console.log(val);
+                   console.log(data.length);
+                   for( i=0; i<data.length; i++){
+                    val+="<tr>"+
+                        "<td>"+data[i].id +"</td>"+
+                        "<td>"+data[i].name +"</td>"+
+                        "<td>"+data[i].username +"</td>"+
+                        "<td>"+data[i].email +"</td>"+
+                    "</tr>"
+                   }
+                   $('.container').html(val);
+
+                    }
+                 },"Json");
+            });
+        </script>
+</body>
+</html>
